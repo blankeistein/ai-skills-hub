@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Skills Catalog",
+  "description": "Index of all curated AI agent skills available in this repository.",
+  "skills_count": 1,
+  "skills": [
+    {
+      "name": "android-code-audit",
+      "directory": "android-code-audit",
+      "path": "skills/android-code-audit",
+      "description": "Systematic audit of Android Kotlin/Jetpack Compose projects for bugs, memory leaks, race conditions/concurrency bugs, performance regressions, security issues, architecture violations, and accessibility gaps. Use this whenever the user asks to review, audit, debug, find issues in, or check the quality/performance/security of an Android project, module, or Kotlin file — including vague requests like \"kenapa app ini lag\", \"cek kodenya\", \"ada bug gak\", \"kok crash\", \"kenapa lemot\", or \"review before release\". Also use proactively when opening an Android codebase for any nontrivial task, since issues found early save rework. Covers Kotlin, Jetpack Compose, Coroutines/Flow, ViewModel/LiveData, Room, and standard Android lifecycle components. This skill is intentionally AI-tool-agnostic — written to be followed by any coding assistant with file-read access to the project (not just Claude).",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false
+    }
+  ]
+}
