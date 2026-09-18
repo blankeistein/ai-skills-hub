@@ -2,13 +2,31 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AI Skills Catalog",
   "description": "Index of all curated AI agent skills available in this repository.",
-  "skills_count": 1,
+  "skills_count": 3,
   "skills": [
     {
       "name": "android-code-audit",
       "directory": "android-code-audit",
       "path": "skills/android-code-audit",
       "description": "Systematic audit of Android Kotlin/Jetpack Compose projects for bugs, memory leaks, race conditions/concurrency bugs, performance regressions, security issues, architecture violations, and accessibility gaps. Use this whenever the user asks to review, audit, debug, find issues in, or check the quality/performance/security of an Android project, module, or Kotlin file — including vague requests like \"kenapa app ini lag\", \"cek kodenya\", \"ada bug gak\", \"kok crash\", \"kenapa lemot\", or \"review before release\". Also use proactively when opening an Android codebase for any nontrivial task, since issues found early save rework. Covers Kotlin, Jetpack Compose, Coroutines/Flow, ViewModel/LiveData, Room, and standard Android lifecycle components. This skill is intentionally AI-tool-agnostic — written to be followed by any coding assistant with file-read access to the project (not just Claude).",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false
+    },
+    {
+      "name": "android-testing-setup",
+      "directory": "android-testing-setup",
+      "path": "skills/android-testing-setup",
+      "description": "Set up, write, and review tests for Android/Kotlin projects — unit tests (ViewModel, Repository, UseCase, plain Kotlin classes) and UI tests (Jetpack Compose testing API). Covers initial project setup (Gradle dependencies, folder structure, base test classes, fakes/test doubles), generating new tests for existing code, and reviewing existing tests for gaps or anti-patterns. Use this skill whenever the user asks to add tests, write unit tests, set up testing, test a ViewModel/Repository/Composable, review test coverage, or mentions JUnit/MockK/Turbine/Compose UI testing in an Android/Kotlin context. Also trigger on \"belum ada test sama sekali, bantu setup\" or \"gimana cara test ViewModel ini\".",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false
+    },
+    {
+      "name": "compose-optimizer",
+      "directory": "compose-optimizer",
+      "path": "skills/compose-optimizer",
+      "description": "Review and audit Jetpack Compose components and screens (Kotlin) for performance issues (unnecessary recomposition, unstable parameters, missing keys/remember), structural problems (reusability, single-responsibility, naming), and architecture issues (state hoisting, ViewModel usage, side-effect handling). Use this skill whenever the user shares Compose code (a @Composable function, a whole screen file, or a component) and asks to optimize, review, audit, refactor, check performance, or \"clean up\" it — even if they don't use the word \"optimize\" explicitly. Also trigger on phrases like \"kenapa komponen ini lag\", \"kenapa recompose terus\", \"compose best practice\", or when the user pastes a .kt file with @Composable and asks for feedback.",
       "has_references": true,
       "has_scripts": false,
       "has_examples": false
