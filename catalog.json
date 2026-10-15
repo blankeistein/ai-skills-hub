@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AI Skills Catalog",
   "description": "Index of all curated AI agent skills available in this repository.",
-  "skills_count": 3,
+  "skills_count": 4,
   "skills": [
     {
       "name": "android-code-audit",
@@ -29,6 +29,15 @@
       "description": "Review and audit Jetpack Compose components and screens (Kotlin) for performance issues (unnecessary recomposition, unstable parameters, missing keys/remember), structural problems (reusability, single-responsibility, naming), and architecture issues (state hoisting, ViewModel usage, side-effect handling). Use this skill whenever the user shares Compose code (a @Composable function, a whole screen file, or a component) and asks to optimize, review, audit, refactor, check performance, or \"clean up\" it — even if they don't use the word \"optimize\" explicitly. Also trigger on phrases like \"kenapa komponen ini lag\", \"kenapa recompose terus\", \"compose best practice\", or when the user pastes a .kt file with @Composable and asks for feedback.",
       "has_references": true,
       "has_scripts": false,
+      "has_examples": false
+    },
+    {
+      "name": "project-docs",
+      "directory": "project-docs",
+      "path": "skills/project-docs",
+      "description": "Create complete, accurate software project documentation (README, architecture, how-it-works, data model, API reference, setup, deployment, configuration, testing, contributing, troubleshooting, ADR) by actually reading the codebase. Use this skill whenever the user wants to document a software project, app, website, API, library or repo, even if they only say \"buat dokumentasi\", \"dokumentasikan projek ini\", \"jelaskan struktur dan cara kerja projek\", \"bikin README\", \"dokumentasi teknis\", \"onboarding doc\", \"handover\", \"arsitektur sistem\", \"technical documentation\", \"document this codebase\", or upload code/zip/folder and ask how it is organized or how it works. Also use it to update, restructure or audit existing docs. Covers web (Laravel/PHP, React/TypeScript, Node), Android (Kotlin/Jetpack Compose), Firebase, and deployment (cPanel, Cloud Run, VPS) but works for any stack.",
+      "has_references": true,
+      "has_scripts": true,
       "has_examples": false
     }
   ]

@@ -18,6 +18,9 @@ import re
 import json
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 # Color helpers for terminal output
 GREEN = "\033[92m"
 RED = "\033[91m"
@@ -80,10 +83,16 @@ def check_markdown_links(file_path: Path):
     """Find all relative markdown links and verify target files exist."""
     content = file_path.read_text(encoding="utf-8")
     errors = []
-    
+
+    # Strip fenced code blocks (e.g. ```lang ... ``` or ````lang ... ````)
+    # so template code examples aren't mistaken for real relative links.
+    clean_content = re.sub(r"(?ms)^(`{3,})[^\n]*\n.*?\n\1\s*$", "", content)
+    # Also strip inline code spans
+    clean_content = re.sub(r"`[^`\n]+`", "", clean_content)
+
     # Regex matching markdown links [text](target) excluding external URLs and anchor-only links
     link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
-    for match in link_pattern.finditer(content):
+    for match in link_pattern.finditer(clean_content):
         target = match.group(2).strip()
         # Ignore external links, mailto, and in-page anchors
         if target.startswith("http://") or target.startswith("https://") or target.startswith("mailto:") or target.startswith("#"):

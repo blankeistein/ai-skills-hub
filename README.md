@@ -13,6 +13,7 @@ Setiap skill dirancang mengikuti prinsip **Progressive Disclosure**, sehingga AI
 | **`android-code-audit`** | `Android` / `Quality` | Audit sistematis proyek Kotlin & Jetpack Compose untuk mendeteksi bugs, memory leaks, race conditions, performa (jank/lag), security, dan arsitektur. | [`skills/android-code-audit`](./skills/android-code-audit/SKILL.md) |
 | **`android-testing-setup`** | `Android` / `Testing` | Setup, penulisan, dan review unit tests (ViewModel/Repo/UseCase) & Compose UI tests dengan JUnit, MockK, Coroutines-test, dan Turbine. | [`skills/android-testing-setup`](./skills/android-testing-setup/SKILL.md) |
 | **`compose-optimizer`** | `Android` / `Compose` | Review dan optimasi komponen & screen Jetpack Compose untuk performa (recomposition), struktur, dan arsitektur (state hoisting). | [`skills/compose-optimizer`](./skills/compose-optimizer/SKILL.md) |
+| **`project-docs`** | `Documentation` / `Engineering` | Pembuatan dokumentasi teknis proyek software yang komprehensif dan akurat (README, arsitektur, data model, API reference, deployment, setup) berbasis analisis langsung pada codebase. | [`skills/project-docs`](./skills/project-docs/SKILL.md) |
 
 > 💡 *Katalog otomatis tersinkronisasi dalam [`catalog.json`](./catalog.json).*
 
