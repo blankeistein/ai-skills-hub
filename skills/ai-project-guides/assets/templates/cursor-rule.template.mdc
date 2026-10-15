@@ -1,0 +1,8 @@
+---
+description: <kapan aturan ini relevan, satu kalimat>
+globs: ["<pola/glob/**/*.ext>"]
+alwaysApply: false
+---
+- <aturan konkret 1; rujuk file contoh: `path/ke/contoh.ext`>
+- <aturan konkret 2>
+- Lihat `AGENTS.md` untuk perintah dan batasan umum.

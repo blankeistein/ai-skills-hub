@@ -2,8 +2,18 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AI Skills Catalog",
   "description": "Index of all curated AI agent skills available in this repository.",
-  "skills_count": 4,
+  "skills_count": 5,
   "skills": [
+    {
+      "name": "ai-project-guides",
+      "directory": "ai-project-guides",
+      "path": "skills/ai-project-guides",
+      "description": "Create, audit, and update AI-agent guidance files for software projects - AGENTS.md, CLAUDE.md, GEMINI.md, DESIGN.md, ARCHITECTURE.md, CONTRIBUTING.md, TESTING.md, SECURITY.md, DATABASE.md, API.md, DEPLOYMENT.md, .cursor/rules, .github/copilot-instructions.md, and similar docs that tell coding agents (Claude Code, Codex, Cursor, Copilot, Gemini CLI, Jules) how a repo works. Use this skill whenever the user mentions AGENTS.md, CLAUDE.md, DESIGN.md, \"panduan AI\", \"instruksi untuk AI agent\", \"context file\", \"rules file\", \"onboarding doc for AI\", \"dokumentasi untuk coding agent\", \"buatkan panduan projek\", design system doc, or wants an AI to understand/follow their codebase conventions, stack, commands, or UI style - even if they do not name the exact file. Also use when a project has a bloated, outdated, or contradictory agent instruction file that needs cleanup, or when a repo should be made \"AI-ready\".",
+      "has_references": true,
+      "has_scripts": true,
+      "has_examples": false,
+      "has_assets": true
+    },
     {
       "name": "android-code-audit",
       "directory": "android-code-audit",
@@ -11,7 +21,8 @@
       "description": "Systematic audit of Android Kotlin/Jetpack Compose projects for bugs, memory leaks, race conditions/concurrency bugs, performance regressions, security issues, architecture violations, and accessibility gaps. Use this whenever the user asks to review, audit, debug, find issues in, or check the quality/performance/security of an Android project, module, or Kotlin file — including vague requests like \"kenapa app ini lag\", \"cek kodenya\", \"ada bug gak\", \"kok crash\", \"kenapa lemot\", or \"review before release\". Also use proactively when opening an Android codebase for any nontrivial task, since issues found early save rework. Covers Kotlin, Jetpack Compose, Coroutines/Flow, ViewModel/LiveData, Room, and standard Android lifecycle components. This skill is intentionally AI-tool-agnostic — written to be followed by any coding assistant with file-read access to the project (not just Claude).",
       "has_references": true,
       "has_scripts": false,
-      "has_examples": false
+      "has_examples": false,
+      "has_assets": false
     },
     {
       "name": "android-testing-setup",
@@ -20,7 +31,8 @@
       "description": "Set up, write, and review tests for Android/Kotlin projects — unit tests (ViewModel, Repository, UseCase, plain Kotlin classes) and UI tests (Jetpack Compose testing API). Covers initial project setup (Gradle dependencies, folder structure, base test classes, fakes/test doubles), generating new tests for existing code, and reviewing existing tests for gaps or anti-patterns. Use this skill whenever the user asks to add tests, write unit tests, set up testing, test a ViewModel/Repository/Composable, review test coverage, or mentions JUnit/MockK/Turbine/Compose UI testing in an Android/Kotlin context. Also trigger on \"belum ada test sama sekali, bantu setup\" or \"gimana cara test ViewModel ini\".",
       "has_references": true,
       "has_scripts": false,
-      "has_examples": false
+      "has_examples": false,
+      "has_assets": false
     },
     {
       "name": "compose-optimizer",
@@ -29,7 +41,8 @@
       "description": "Review and audit Jetpack Compose components and screens (Kotlin) for performance issues (unnecessary recomposition, unstable parameters, missing keys/remember), structural problems (reusability, single-responsibility, naming), and architecture issues (state hoisting, ViewModel usage, side-effect handling). Use this skill whenever the user shares Compose code (a @Composable function, a whole screen file, or a component) and asks to optimize, review, audit, refactor, check performance, or \"clean up\" it — even if they don't use the word \"optimize\" explicitly. Also trigger on phrases like \"kenapa komponen ini lag\", \"kenapa recompose terus\", \"compose best practice\", or when the user pastes a .kt file with @Composable and asks for feedback.",
       "has_references": true,
       "has_scripts": false,
-      "has_examples": false
+      "has_examples": false,
+      "has_assets": false
     },
     {
       "name": "project-docs",
@@ -38,7 +51,8 @@
       "description": "Create complete, accurate software project documentation (README, architecture, how-it-works, data model, API reference, setup, deployment, configuration, testing, contributing, troubleshooting, ADR) by actually reading the codebase. Use this skill whenever the user wants to document a software project, app, website, API, library or repo, even if they only say \"buat dokumentasi\", \"dokumentasikan projek ini\", \"jelaskan struktur dan cara kerja projek\", \"bikin README\", \"dokumentasi teknis\", \"onboarding doc\", \"handover\", \"arsitektur sistem\", \"technical documentation\", \"document this codebase\", or upload code/zip/folder and ask how it is organized or how it works. Also use it to update, restructure or audit existing docs. Covers web (Laravel/PHP, React/TypeScript, Node), Android (Kotlin/Jetpack Compose), Firebase, and deployment (cPanel, Cloud Run, VPS) but works for any stack.",
       "has_references": true,
       "has_scripts": true,
-      "has_examples": false
+      "has_examples": false,
+      "has_assets": false
     }
   ]
 }

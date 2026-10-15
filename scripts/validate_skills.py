@@ -163,7 +163,8 @@ def validate_skill_dir(skill_dir: Path):
         "description": desc,
         "has_references": ref_dir.exists(),
         "has_scripts": (skill_dir / "scripts").exists(),
-        "has_examples": (skill_dir / "examples").exists()
+        "has_examples": (skill_dir / "examples").exists(),
+        "has_assets": (skill_dir / "assets").exists()
     }
 
     is_valid = len(errors) == 0
