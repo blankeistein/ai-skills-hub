@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "AI Skills Catalog",
   "description": "Index of all curated AI agent skills available in this repository.",
-  "skills_count": 5,
+  "skills_count": 9,
   "skills": [
     {
       "name": "ai-project-guides",
@@ -51,6 +51,46 @@
       "description": "Create complete, accurate software project documentation (README, architecture, how-it-works, data model, API reference, setup, deployment, configuration, testing, contributing, troubleshooting, ADR) by actually reading the codebase. Use this skill whenever the user wants to document a software project, app, website, API, library or repo, even if they only say \"buat dokumentasi\", \"dokumentasikan projek ini\", \"jelaskan struktur dan cara kerja projek\", \"bikin README\", \"dokumentasi teknis\", \"onboarding doc\", \"handover\", \"arsitektur sistem\", \"technical documentation\", \"document this codebase\", or upload code/zip/folder and ask how it is organized or how it works. Also use it to update, restructure or audit existing docs. Covers web (Laravel/PHP, React/TypeScript, Node), Android (Kotlin/Jetpack Compose), Firebase, and deployment (cPanel, Cloud Run, VPS) but works for any stack.",
       "has_references": true,
       "has_scripts": true,
+      "has_examples": false,
+      "has_assets": false
+    },
+    {
+      "name": "remotion-video-builder",
+      "directory": "remotion-video-builder",
+      "path": "skills/remotion-video-builder",
+      "description": "Tahap 3 pipeline video (produksi). Membuat video dengan Remotion (React + TypeScript) dari scenes.json atau storyboard - menulis komponen scene, animasi spring/interpolate, transisi, teks, audio, lalu menjelaskan cara preview dan render ke MP4. Gunakan skill ini setiap kali user menyebut Remotion, ingin video dari kode React, motion graphics, kinetic typography, video otomatis/massal dari data, explainer animasi, atau minta \"buatkan videonya\" setelah ada storyboard. Jalankan setelah video-storyboard; jika belum ada storyboard, minta atau buat dulu secara ringkas.",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false,
+      "has_assets": false
+    },
+    {
+      "name": "video-review-export",
+      "directory": "video-review-export",
+      "path": "skills/video-review-export",
+      "description": "Tahap 4 pipeline video (pasca-produksi). Memeriksa dan memperbaiki video setelah dibuat - checklist review (hook, ritme, keterbacaan teks, audio), cara render dan export dengan setting yang tepat per platform (Reels/TikTok/Shorts/YouTube), kompres ukuran, thumbnail, caption dan hashtag posting. Gunakan skill ini ketika user bilang videonya sudah jadi, minta review/feedback video, bingung cara render atau export MP4, file terlalu besar, kualitas jelek, audio terlalu pelan/keras, atau mau mempublikasikan ke sosmed. Jalankan setelah remotion-video-builder.",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false,
+      "has_assets": false
+    },
+    {
+      "name": "video-script-writer",
+      "directory": "video-script-writer",
+      "path": "skills/video-script-writer",
+      "description": "Tahap 1 pipeline video (pra-produksi). Menulis ide, tujuan, hook, dan naskah/script video pendek atau explainer sebelum dibuat visualnya. Gunakan skill ini setiap kali user ingin bikin konten video, minta ide video, naskah, script, voice over, caption, hook TikTok/Reels/Shorts/YouTube, atau bilang \"aku mau bikin video tentang X\", meskipun mereka tidak menyebut kata \"script\". Jalankan SEBELUM video-storyboard dan remotion-video-builder.",
+      "has_references": true,
+      "has_scripts": false,
+      "has_examples": false,
+      "has_assets": false
+    },
+    {
+      "name": "video-storyboard",
+      "directory": "video-storyboard",
+      "path": "skills/video-storyboard",
+      "description": "Tahap 2 pipeline video (pra-produksi). Mengubah naskah menjadi storyboard per-scene dan file scenes.json terstruktur (durasi, teks layar, visual, animasi, audio, aset) yang menjadi masukan langsung untuk Remotion. Gunakan skill ini ketika user punya naskah/script dan ingin dibagi per adegan, minta storyboard, shot list, rencana visual, daftar scene, palet warna/font untuk video, atau sebelum membuat video dengan Remotion. Jalankan setelah video-script-writer dan sebelum remotion-video-builder.",
+      "has_references": true,
+      "has_scripts": false,
       "has_examples": false,
       "has_assets": false
     }

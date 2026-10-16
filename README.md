@@ -15,8 +15,25 @@ Setiap skill dirancang mengikuti prinsip **Progressive Disclosure**, sehingga AI
 | **`android-testing-setup`** | `Android` / `Testing` | Setup, penulisan, dan review unit tests (ViewModel/Repo/UseCase) & Compose UI tests dengan JUnit, MockK, Coroutines-test, dan Turbine. | [`skills/android-testing-setup`](./skills/android-testing-setup/SKILL.md) |
 | **`compose-optimizer`** | `Android` / `Compose` | Review dan optimasi komponen & screen Jetpack Compose untuk performa (recomposition), struktur, dan arsitektur (state hoisting). | [`skills/compose-optimizer`](./skills/compose-optimizer/SKILL.md) |
 | **`project-docs`** | `Documentation` / `Engineering` | Pembuatan dokumentasi teknis proyek software yang komprehensif dan akurat (README, arsitektur, data model, API reference, deployment, setup) berbasis analisis langsung pada codebase. | [`skills/project-docs`](./skills/project-docs/SKILL.md) |
+| **`remotion-video-builder`** | `Video` / `Remotion` | Tahap 3 pipeline video (produksi): pembuatan video berbasis kode React + TypeScript dengan Remotion dari `scenes.json` atau storyboard, lengkap dengan animasi, layout, dan render MP4. | [`skills/remotion-video-builder`](./skills/remotion-video-builder/SKILL.md) |
+| **`video-review-export`** | `Video` / `Post-Production` | Tahap 4 pipeline video (pasca-produksi): checklist review kualitas, parameter export/render per platform (TikTok, Reels, Shorts, YouTube), optimasi ukuran bitrate, dan paket publikasi. | [`skills/video-review-export`](./skills/video-review-export/SKILL.md) |
+| **`video-script-writer`** | `Video` / `Pre-Production` | Tahap 1 pipeline video (pra-produksi): penulisan ide konsep, brief penonton/tujuan, hook memikat, dan naskah/script video pendek atau explainer siap storyboard. | [`skills/video-script-writer`](./skills/video-script-writer/SKILL.md) |
+| **`video-storyboard`** | `Video` / `Pre-Production` | Tahap 2 pipeline video (pra-produksi): pemecahan naskah jadi storyboard per-scene dan struktur data `scenes.json` yang siap dieksekusi langsung di Remotion. | [`skills/video-storyboard`](./skills/video-storyboard/SKILL.md) |
 
 > 💡 *Katalog otomatis tersinkronisasi dalam [`catalog.json`](./catalog.json).*
+
+### 🎬 Pipeline Pembuatan Video (End-to-End)
+
+Keempat skill video dirancang untuk bekerja secara berkesinambungan (*chained pipeline*):
+```text
+1. video-script-writer      -> Menghasilkan naskah matang, brief, dan variasi hook
+        ↓
+2. video-storyboard         -> Memecah naskah ke visual scene & file scenes.json
+        ↓
+3. remotion-video-builder   -> Mengonversi scenes.json ke komponen React + animasi Remotion
+        ↓
+4. video-review-export      -> Review kualitas, render MP4 per platform & materi publikasi
+```
 
 ---
 
